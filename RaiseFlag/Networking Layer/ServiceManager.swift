@@ -17,10 +17,14 @@ class ServiceManager: NSObject {
             }
             else if(response.response != nil){
                 var users = [User]()
+                if response.result.value is Array<Any>{
                 let list=response.result.value as! Array<Any>
+                if list.count>0{
                 for dic in list{
                     let user=User.init(fromDictionary:dic as! [String : Any])
                     users.append(user)
+                }
+                }
                 }
                 compeletion(users,nil)
 

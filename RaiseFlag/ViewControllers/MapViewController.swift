@@ -31,7 +31,7 @@ class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDel
     @IBOutlet weak var testView: UIView!
     @IBOutlet weak var timerView: UIView!
     @IBOutlet weak var mapView: GMSMapView!
-    var zoomLevel: Float = 14.0
+    var zoomLevel: Float = 16.0
     var camera = GMSCameraPosition()
     
     @IBOutlet weak var countView: UIView!
@@ -49,16 +49,12 @@ class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDel
         // add counter label
         let fromDate   = NSDate().addingTimeInterval(100)
         let targetDate = fromDate.addingTimeInterval(400)
-        let countdownLabel = CountdownLabel(frame: CGRect(x: 20, y: 0, width: 132, height: 52), fromDate: fromDate, targetDate: targetDate)
+        let countdownLabel = CountdownLabel(frame: CGRect(x: 20, y: 0, width: 132, height: 35), fromDate: fromDate, targetDate: targetDate)
         countdownLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         countdownLabel.font = UIFont.boldSystemFont(ofSize: 22)
         countdownLabel.start()
-        
          self.timeView.addSubview(countdownLabel)
-        self.mapView.bringSubview(toFront: timerView)
-        self.mapView.bringSubview(toFront: distanceView)
-
-        let camera = GMSCameraPosition.camera(withLatitude: 21.4226496329252 , longitude: 39.8264269995111, zoom: zoomLevel)
+        let camera = GMSCameraPosition.camera(withLatitude: 21.4231666658504 , longitude: 39.8258475814949, zoom: zoomLevel)
         self.mapView.camera = camera
        // self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         
@@ -76,14 +72,11 @@ class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDel
         }
         self.mapView?.isMyLocationEnabled = true
         self.mapView.isBuildingsEnabled = true
-       // self.view = mapView
-       // self.timerView.bringSubview(toFront: mapView)
-     //   self.mapView.addSubview(timerView)
         self.mapView.tintColor = #colorLiteral(red: 1, green: 0, blue: 0.1273266375, alpha: 1)
+        
         SVProgressHUD.show()
     }
     
-
     override func viewDidDisappear(_ animated: Bool) {
         timer.invalidate()
     }
@@ -98,6 +91,8 @@ class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDel
                                           selector: #selector(readUsersJSON),
                                           userInfo: nil,
                                           repeats: true)
+        self.mapView.bringSubview(toFront: timerView)
+        self.mapView.bringSubview(toFront: distanceView)
 
     }
     
@@ -176,10 +171,10 @@ class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDel
             marker.snippet = status
             marker.iconView = imageView
             marker.map = self.mapView
-//            self.camera = GMSCameraPosition.camera(withLatitude: lat!, longitude: long!, zoom:zoomLevel)
-//            self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
             newMarkers.append(marker)
-            if user.hasReported && user.outOfRange{
+            self.mapView.camera = GMSCameraPosition.camera(withLatitude: lat! , longitude: long!, zoom: zoomLevel)
+
+            if user.hasReported != true && user.outOfRange{
                 let messageView: MessageView = MessageView.viewFromNib(layout: .centeredView)
                 messageView.configureContent(title: user.fullName + "  is out of range", body: "")
                 messageView.button?.isHidden = false
@@ -226,7 +221,7 @@ class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDel
             marker.map = mapView
             oldMarkers.append(marker)
             
-                        if user.hasReported && user.outOfRange{
+                        if user.hasReported != true && user.outOfRange{
                             let messageView: MessageView = MessageView.viewFromNib(layout: .centeredView)
                             messageView.configureContent(title: user.fullName + "  is out of range", body: "")
                             messageView.button?.isHidden = false

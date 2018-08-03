@@ -35,6 +35,8 @@ class HomeViewController: ISHPullUpViewController {
     @objc func presentAdsView(){
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let bottomVC = storyBoard.instantiateViewController(withIdentifier: "AdsViewController") as! AdsViewController
+        bottomVC.modalPresentationStyle = .overFullScreen
+        bottomVC.view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2)
         navigationController?.present(bottomVC, animated: true, completion: {
             DispatchQueue.main.asyncAfter(deadline: (.now()+3), execute: {
                 self.dismiss(animated: true, completion: {

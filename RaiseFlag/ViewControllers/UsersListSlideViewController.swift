@@ -29,12 +29,13 @@ class UsersListSlideViewController: UIViewController,ISHPullUpStateDelegate,ISHP
         topView.addGestureRecognizer(tapGesture)
         tableView.tableHeaderView = UIView()
         tableView.tableFooterView = UIView()
-        readUsersJSON()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         firstAppearanceCompleted = true;
+       // readUsersJSON()
+
     }
 
     @objc private dynamic func handleTapGesture(gesture: UITapGestureRecognizer) {
@@ -73,6 +74,8 @@ class UsersListSlideViewController: UIViewController,ISHPullUpStateDelegate,ISHP
     
     func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, update edgeInsets: UIEdgeInsets, forBottomViewController bottomVC: UIViewController) {
         scrollView.contentInset = edgeInsets;
+        readUsersJSON()
+
     }
     
     // MARK: ISHPullUpStateDelegate

@@ -21,7 +21,11 @@ class AdsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func adPressed(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.saudia.com/")!, options: [:], completionHandler: nil)
 
+    }
+    
     /*
     // MARK: - Navigation
 
