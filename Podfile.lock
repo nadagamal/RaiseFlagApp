@@ -1,0 +1,121 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AnnotationETA (0.1.2)
+  - Cache (5.0.0)
+  - CountdownLabel (3.0.0)
+  - CryptoSwift (0.11.0)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
+  - iOS-GPX-Framework (0.0.4):
+    - TBXML (~> 1.5)
+  - ISHPullUp (1.0.7)
+  - Kingfisher (4.6.4)
+  - NVActivityIndicatorView (4.3.0):
+    - NVActivityIndicatorView/Presenter (= 4.3.0)
+  - NVActivityIndicatorView/Presenter (4.3.0)
+  - SIAlertView (1.3)
+  - SideMenu (4.0.0)
+  - SVProgressHUD (2.2.5)
+  - SwifterSwift (4.4.0):
+    - SwifterSwift/AppKit (= 4.4.0)
+    - SwifterSwift/CoreGraphics (= 4.4.0)
+    - SwifterSwift/CoreLocation (= 4.4.0)
+    - SwifterSwift/Foundation (= 4.4.0)
+    - SwifterSwift/MapKit (= 4.4.0)
+    - SwifterSwift/SpriteKit (= 4.4.0)
+    - SwifterSwift/SwiftStdlib (= 4.4.0)
+    - SwifterSwift/UIKit (= 4.4.0)
+  - SwifterSwift/AppKit (4.4.0)
+  - SwifterSwift/CoreGraphics (4.4.0)
+  - SwifterSwift/CoreLocation (4.4.0)
+  - SwifterSwift/Foundation (4.4.0)
+  - SwifterSwift/MapKit (4.4.0)
+  - SwifterSwift/SpriteKit (4.4.0)
+  - SwifterSwift/SwiftStdlib (4.4.0)
+  - SwifterSwift/UIKit (4.4.0)
+  - SwiftMessages (4.1.4):
+    - SwiftMessages/App (= 4.1.4)
+  - SwiftMessages/App (4.1.4)
+  - TBXML (1.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - AnnotationETA
+  - Cache (from `https://github.com/hyperoslo/Cache`)
+  - CountdownLabel
+  - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`)
+  - GoogleMaps
+  - GooglePlaces
+  - iOS-GPX-Framework (from `http://github.com/merlos/iOS-GPX-Framework`)
+  - ISHPullUp
+  - Kingfisher
+  - NVActivityIndicatorView
+  - SIAlertView
+  - SideMenu
+  - SVProgressHUD
+  - SwifterSwift
+  - SwiftMessages
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AnnotationETA
+    - CountdownLabel
+    - GoogleMaps
+    - GooglePlaces
+    - ISHPullUp
+    - Kingfisher
+    - NVActivityIndicatorView
+    - SIAlertView
+    - SideMenu
+    - SVProgressHUD
+    - SwifterSwift
+    - SwiftMessages
+    - TBXML
+
+EXTERNAL SOURCES:
+  Cache:
+    :git: https://github.com/hyperoslo/Cache
+  CryptoSwift:
+    :git: https://github.com/krzyzanowskim/CryptoSwift
+  iOS-GPX-Framework:
+    :git: http://github.com/merlos/iOS-GPX-Framework
+
+CHECKOUT OPTIONS:
+  Cache:
+    :commit: 34db39445fba0ca9a6aa6a307fa24bfcf7744fc9
+    :git: https://github.com/hyperoslo/Cache
+  CryptoSwift:
+    :commit: 3f6869c469abf3e2ebefe3b6baef4bfac3aac305
+    :git: https://github.com/krzyzanowskim/CryptoSwift
+  iOS-GPX-Framework:
+    :commit: 9ac7b6ca3d1ab9b28007d3e88c9888a2f78099db
+    :git: http://github.com/merlos/iOS-GPX-Framework
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AnnotationETA: d03d17eeabddcbfffc2dc0f026aa150678d62d0a
+  Cache: fae4826ba52d7a5d9a3a0ad6fe73e3501a82964f
+  CountdownLabel: 4534a68892b1deb73fda18702dfdc2c8444cec08
+  CryptoSwift: ad5208dd2aae0a764ea4ce2c2d34bd067cae67f0
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  iOS-GPX-Framework: 38b56820461b99cd7f1fb6cf1e0621f72d63e872
+  ISHPullUp: eaa91bef06270264e1f923bc764705173d341495
+  Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
+  NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
+  SIAlertView: 20c794b55eaf44d888773ea51647cf8907723919
+  SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwifterSwift: 1ce0e31801ddd3a2bd3256626275425adb01067a
+  SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
+  TBXML: 9f9dadb239f2f2af1dadb87fe43a0ce6e479379a
+
+PODFILE CHECKSUM: 418f85ab04ecf945fc8396dc29a7826063bc2bb7
+
+COCOAPODS: 1.5.3
