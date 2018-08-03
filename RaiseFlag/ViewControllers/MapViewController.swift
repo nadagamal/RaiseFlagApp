@@ -163,6 +163,7 @@ class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDel
                 image = #imageLiteral(resourceName: "redAnnotation")
             }
             imageView.image = image
+            if oldMarkers.count>i{
             let marker = oldMarkers[i]
             marker.map = nil
             marker.position = newcoordinate
@@ -173,7 +174,7 @@ class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDel
             marker.map = self.mapView
             newMarkers.append(marker)
             self.mapView.camera = GMSCameraPosition.camera(withLatitude: lat! , longitude: long!, zoom: zoomLevel)
-
+            }
             if user.hasReported != true && user.outOfRange{
                 let messageView: MessageView = MessageView.viewFromNib(layout: .centeredView)
                 messageView.configureContent(title: user.fullName + "  is out of range", body: "")

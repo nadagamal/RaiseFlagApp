@@ -21,6 +21,7 @@
 		523A08822111AD9600BAC719 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523A08812111AD9600BAC719 /* MapViewController.swift */; };
 		523A08842111FEC800BAC719 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523A08832111FEC700BAC719 /* DetailViewController.swift */; };
 		5249ABFE21140A160009A88C /* TrackModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249ABFD21140A160009A88C /* TrackModeViewController.swift */; };
+		5249AC00211414470009A88C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249ABFF211414470009A88C /* MenuViewController.swift */; };
 		52841EC72113D1C30078DB8E /* AdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52841EC62113D1C30078DB8E /* AdsViewController.swift */; };
 		52841F1A2113D8640078DB8E /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52841ECB2113D8640078DB8E /* Array+Extensions.swift */; };
 		52841F1B2113D8640078DB8E /* UISegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52841ECC2113D8640078DB8E /* UISegmentedControl+Extensions.swift */; };
@@ -81,6 +82,7 @@
 		523A08812111AD9600BAC719 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		523A08832111FEC700BAC719 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5249ABFD21140A160009A88C /* TrackModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModeViewController.swift; sourceTree = "<group>"; };
+		5249ABFF211414470009A88C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		52841EC62113D1C30078DB8E /* AdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsViewController.swift; sourceTree = "<group>"; };
 		52841ECB2113D8640078DB8E /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		52841ECC2113D8640078DB8E /* UISegmentedControl+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				52841EC62113D1C30078DB8E /* AdsViewController.swift */,
 				52841F4F2113DB170078DB8E /* UserPopUpViewController.swift */,
 				5249ABFD21140A160009A88C /* TrackModeViewController.swift */,
+				5249ABFF211414470009A88C /* MenuViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				52BDB28B2111833A00C008CB /* TrackerButton.swift in Sources */,
 				52841EC72113D1C30078DB8E /* AdsViewController.swift in Sources */,
 				52841F1A2113D8640078DB8E /* Array+Extensions.swift in Sources */,
+				5249AC00211414470009A88C /* MenuViewController.swift in Sources */,
 				52841F2A2113D8640078DB8E /* UITextField+Extensions.swift in Sources */,
 				52841F1D2113D8640078DB8E /* UIViewController+Extensions.swift in Sources */,
 				52BDB2892111833A00C008CB /* UIDistanceLabel.swift in Sources */,

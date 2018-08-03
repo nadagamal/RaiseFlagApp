@@ -10,17 +10,10 @@ import UIKit
 
 class TrackModeViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var customeModeBtn: UIButton!
+    @IBOutlet weak var trackmode: UIButton!
+    @IBOutlet weak var freemodeBtn: UIButton!
 
-        // Do any additional setup after loading the view.
-        tableView.tableHeaderView = UIView()
-    }
-
-    @IBAction func cancelAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -35,6 +28,32 @@ class TrackModeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func freeModeBtnAction(_ sender: Any) {
+        freemodeBtn.backgroundColor = #colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1)
+        trackmode.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        customeModeBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    }
+    @IBAction func customMode(_ sender: Any) {
+        freemodeBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        trackmode.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        customeModeBtn.backgroundColor = #colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1)
+    }
+    @IBAction func trackModeAction(_ sender: Any) {
+        freemodeBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        trackmode.backgroundColor = #colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1)
+        customeModeBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    }
+    @IBOutlet weak var tableView: UITableView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        tableView.tableHeaderView = UIView()
+    }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }
 extension TrackModeViewController:UITableViewDelegate,UITableViewDataSource{

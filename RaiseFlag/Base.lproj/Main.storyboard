@@ -277,6 +277,9 @@
                                         <color key="value" red="0.23921568630000001" green="0.49019607840000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="freeModeBtnAction:" destination="N0h-FN-I9l" eventType="touchUpInside" id="XiT-zl-v1l"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ayl-GR-hf6">
                                 <rect key="frame" x="142" y="119" width="92" height="40"/>
@@ -299,6 +302,9 @@
                                         <color key="value" red="0.23921568630000001" green="0.49019607840000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="trackModeAction:" destination="N0h-FN-I9l" eventType="touchUpInside" id="RVp-U2-LNC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2B-mq-iZR">
                                 <rect key="frame" x="271" y="119" width="91.5" height="40"/>
@@ -320,6 +326,9 @@
                                         <color key="value" red="0.23921568630000001" green="0.49019607840000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="customMode:" destination="N0h-FN-I9l" eventType="touchUpInside" id="CgZ-k0-QwV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The mood mean you can be tracked all Hajjis but you must enter the ring of meters that you tracked" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEq-gD-Tib">
                                 <rect key="frame" x="16" y="173" width="343" height="54"/>
@@ -580,7 +589,10 @@
                         <viewLayoutGuide key="safeArea" id="e3D-Bc-gJB"/>
                     </view>
                     <connections>
+                        <outlet property="customeModeBtn" destination="A2B-mq-iZR" id="aD7-0P-20S"/>
+                        <outlet property="freemodeBtn" destination="E8b-M0-WXK" id="PCW-ua-hXM"/>
                         <outlet property="tableView" destination="0K4-vB-sC4" id="e2T-ub-fnd"/>
+                        <outlet property="trackmode" destination="Ayl-GR-hf6" id="dcL-xY-Sxe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jV-Z5-Omt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -599,7 +611,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ad2" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-by-ETA">
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ad2" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-by-ETA">
                                 <rect key="frame" x="0.0" y="123" width="375" height="378"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -1068,10 +1080,10 @@
             </objects>
             <point key="canvasLocation" x="-132" y="590"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="6Uc-6S-06S">
             <objects>
-                <tableViewController id="0yD-Ld-iey" sceneMemberID="viewController">
+                <tableViewController id="0yD-Ld-iey" customClass="MenuViewController" customModule="RaiseFlag" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" id="nMa-6S-7ib">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1095,6 +1107,9 @@
                                                     <state key="normal" title="      EMERGENCY CALL     ">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="emergencyAction:" destination="0yD-Ld-iey" eventType="touchUpInside" id="dpE-IJ-oV2"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.23921568630000001" green="0.49019607840000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
