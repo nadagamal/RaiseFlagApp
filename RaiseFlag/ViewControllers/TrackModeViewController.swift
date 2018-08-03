@@ -32,16 +32,27 @@ class TrackModeViewController: UIViewController {
         freemodeBtn.backgroundColor = #colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1)
         trackmode.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         customeModeBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        trackmode.setTitleColor(#colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1), for: .normal)
+        freemodeBtn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        customeModeBtn.setTitleColor(#colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1), for: .normal)
     }
     @IBAction func customMode(_ sender: Any) {
         freemodeBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         trackmode.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         customeModeBtn.backgroundColor = #colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1)
+        
+        trackmode.setTitleColor(#colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1), for: .normal)
+        freemodeBtn.setTitleColor(#colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1), for: .normal)
+        customeModeBtn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
     }
     @IBAction func trackModeAction(_ sender: Any) {
         freemodeBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         trackmode.backgroundColor = #colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1)
         customeModeBtn.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        trackmode.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        freemodeBtn.setTitleColor(#colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1), for: .normal)
+        customeModeBtn.setTitleColor(#colorLiteral(red: 0.2274509804, green: 0.4666666667, blue: 0.9058823529, alpha: 1), for: .normal)
     }
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {

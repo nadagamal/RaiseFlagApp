@@ -22,6 +22,9 @@
 		523A08842111FEC800BAC719 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523A08832111FEC700BAC719 /* DetailViewController.swift */; };
 		5249ABFE21140A160009A88C /* TrackModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249ABFD21140A160009A88C /* TrackModeViewController.swift */; };
 		5249AC00211414470009A88C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5249ABFF211414470009A88C /* MenuViewController.swift */; };
+		5249AC04211416A20009A88C /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5249AC01211416A20009A88C /* CoreAudio.framework */; };
+		5249AC08211416D60009A88C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5249AC07211416D60009A88C /* AVFoundation.framework */; };
+		5249AC0B211418000009A88C /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5249AC0A211418000009A88C /* bell.mp3 */; };
 		52841EC72113D1C30078DB8E /* AdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52841EC62113D1C30078DB8E /* AdsViewController.swift */; };
 		52841F1A2113D8640078DB8E /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52841ECB2113D8640078DB8E /* Array+Extensions.swift */; };
 		52841F1B2113D8640078DB8E /* UISegmentedControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52841ECC2113D8640078DB8E /* UISegmentedControl+Extensions.swift */; };
@@ -83,6 +86,11 @@
 		523A08832111FEC700BAC719 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5249ABFD21140A160009A88C /* TrackModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackModeViewController.swift; sourceTree = "<group>"; };
 		5249ABFF211414470009A88C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		5249AC01211416A20009A88C /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		5249AC02211416A20009A88C /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		5249AC03211416A20009A88C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5249AC07211416D60009A88C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5249AC0A211418000009A88C /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
 		52841EC62113D1C30078DB8E /* AdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsViewController.swift; sourceTree = "<group>"; };
 		52841ECB2113D8640078DB8E /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		52841ECC2113D8640078DB8E /* UISegmentedControl+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extensions.swift"; sourceTree = "<group>"; };
@@ -139,6 +147,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5249AC08211416D60009A88C /* AVFoundation.framework in Frameworks */,
+				5249AC04211416A20009A88C /* CoreAudio.framework in Frameworks */,
 				52BDB25C211181D600C008CB /* MapKit.framework in Frameworks */,
 				52BDB25A211181D000C008CB /* CoreLocation.framework in Frameworks */,
 				C37A73928F05091A3D7DBB3F /* Pods_RaiseFlag.framework in Frameworks */,
@@ -164,6 +174,15 @@
 			);
 			path = "Networking Layer";
 			sourceTree = "<group>";
+		};
+		5249AC09211418000009A88C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5249AC0A211418000009A88C /* bell.mp3 */,
+			);
+			name = Sounds;
+			path = RaiseFlag/Sounds;
+			sourceTree = SOURCE_ROOT;
 		};
 		52841EC82113D8640078DB8E /* AlertView */ = {
 			isa = PBXGroup;
@@ -327,6 +346,7 @@
 		52BDB25D2111831500C008CB /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				5249AC09211418000009A88C /* Sounds */,
 				52841EC82113D8640078DB8E /* AlertView */,
 				52A9539921139C2900EFA276 /* ARCarMovement */,
 				52BDB2762111833A00C008CB /* GPXMapView */,
@@ -363,6 +383,10 @@
 		FE75C803116AA09A6C20FFC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5249AC07211416D60009A88C /* AVFoundation.framework */,
+				5249AC03211416A20009A88C /* AudioToolbox.framework */,
+				5249AC02211416A20009A88C /* AudioUnit.framework */,
+				5249AC01211416A20009A88C /* CoreAudio.framework */,
 				52BDB25B211181D600C008CB /* MapKit.framework */,
 				52BDB259211181D000C008CB /* CoreLocation.framework */,
 				5A3AE3D773A7B1C652BB4092 /* Pods_RaiseFlag.framework */,
@@ -441,6 +465,7 @@
 				52BBF7D22112949D00E59D68 /* Users.json in Resources */,
 				52A95396211343D500EFA276 /* style.json in Resources */,
 				52BDB24321116E2100C008CB /* Assets.xcassets in Resources */,
+				5249AC0B211418000009A88C /* bell.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,11 +15,13 @@ import SwiftMessages
 import GoogleMaps
 import GooglePlaces
 import SVProgressHUD
+import AVFoundation
 class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDelegate,GMSMapViewDelegate{
     var users = [User]()
     var oldUsers = [User]()
     var oldMarkers = [GMSMarker]()
     var newMarkers = [GMSMarker]()
+    var player: AVAudioPlayer?
 
     var timer = Timer()
     @IBOutlet weak var mapSubView: UIView!
@@ -193,6 +195,10 @@ class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDel
                 config.presentationStyle = .top
                 config.presentationContext = .viewController(self)
                 SwiftMessages.show(config: config, view: messageView)
+                DispatchQueue.main.async {
+                    self.playSound()
+
+                }
             }
         }
         oldMarkers = newMarkers
@@ -240,6 +246,10 @@ class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDel
                             config.presentationStyle = .top
                             config.presentationContext = .viewController(self)
                             SwiftMessages.show(config: config, view: messageView)
+                            DispatchQueue.main.async {
+                                self.playSound()
+                                
+                            }
                             }
         }
         
@@ -250,7 +260,21 @@ class MapViewController: UIViewController,ISHPullUpContentDelegate, MKMapViewDel
         
         UIApplication.shared.open(number, options: [:], completionHandler: nil)
     }
-    
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "bell", withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let player = player else { return }
+            
+            player.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
 extension MapViewController: CLLocationManagerDelegate {
     //Heading
