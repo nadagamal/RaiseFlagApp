@@ -20,6 +20,7 @@ class UsersListSlideViewController: UIViewController,ISHPullUpStateDelegate,ISHP
     private var firstAppearanceCompleted = false
     weak var pullUpController: ISHPullUpViewController!
     var users = [User]()
+    var timer = Timer()
 
     private var halfWayPoint = CGFloat(0)
     
@@ -29,6 +30,11 @@ class UsersListSlideViewController: UIViewController,ISHPullUpStateDelegate,ISHP
         topView.addGestureRecognizer(tapGesture)
         tableView.tableHeaderView = UIView()
         tableView.tableFooterView = UIView()
+        self.timer = Timer.scheduledTimer(timeInterval: 5.0,
+                                          target: self,
+                                          selector: #selector(readUsersJSON),
+                                          userInfo: nil,
+                                          repeats: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,7 +43,9 @@ class UsersListSlideViewController: UIViewController,ISHPullUpStateDelegate,ISHP
        // readUsersJSON()
 
     }
-
+    override func viewDidDisappear(_ animated: Bool) {
+        timer.invalidate()
+    }
     @objc private dynamic func handleTapGesture(gesture: UITapGestureRecognizer) {
         if pullUpController.isLocked {
             return
@@ -74,7 +82,6 @@ class UsersListSlideViewController: UIViewController,ISHPullUpStateDelegate,ISHP
     
     func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, update edgeInsets: UIEdgeInsets, forBottomViewController bottomVC: UIViewController) {
         scrollView.contentInset = edgeInsets;
-        readUsersJSON()
 
     }
     
@@ -90,13 +97,13 @@ class UsersListSlideViewController: UIViewController,ISHPullUpStateDelegate,ISHP
         }
     }
     @objc func readUsersJSON(){
-        SVProgressHUD.show()
+       // SVProgressHUD.show()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         //self.mapView.clear()
         ServiceManager().getUsers(status: appDelegate.isFirstAppOpen) { (users, error) in
             if  error == nil {
                 DispatchQueue.main.async {
-                    SVProgressHUD.dismiss()
+             //       SVProgressHUD.dismiss()
                     self.users = users!
                     self.tableView.reloadData()
                 }
